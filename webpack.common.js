@@ -19,12 +19,9 @@ module.exports = {
       },
       {
         test: /service.worker\.js$/,
-        loaders: [
+        use: [
           {
             loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-            },
           },
         ],
       },
