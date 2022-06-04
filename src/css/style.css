@@ -1,0 +1,142 @@
+body {
+  background-color: #cde0f1;
+  font-size: large;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+ul {
+  padding: 0;
+  font-size: large;
+  font-family: inherit;
+}
+
+h1 {
+  font-size: larger;
+  color: #3191f2;
+  font-family: inherit;
+}
+
+h2 {
+  font-size: large;
+  color: #3191f2;
+  font-family: inherit;
+}
+
+li {
+  list-style: none;
+  font-size: large;
+  margin-bottom: 15px;
+  font-family: inherit;
+}
+
+p {
+  margin: 0px;
+  font-family: inherit;
+}
+
+button {
+  font-size: large;
+  cursor: pointer;
+  padding: 10px 15px;
+  border-radius: 5px;
+  border: 1px solid #3191f2;
+  color: #ffffff;
+  background-color: #3191f2;
+  margin: 10px 0px;
+  font-family: inherit;
+}
+button:hover {
+  background-color: #0a7df0;
+}
+
+.news {
+  width: 500px;
+  border: 1px solid #3191f2;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding-bottom: 10px;
+  position: relative;
+}
+
+.news__top {
+  display: flex;
+  justify-content: space-between;
+  padding: 0px 20px;
+}
+
+.news__item,
+.news__item_loading {
+  margin: 10px;
+  padding: 10px;
+  box-sizing: border-box;
+  border: 1px solid #3191f2;
+  border-radius: 10px;
+  box-sizing: border-box;
+}
+
+.item__date {
+  margin-bottom: 10px;
+}
+
+.item__body {
+  display: flex;
+  justify-content: space-between;
+}
+
+.item__image {
+  width: 70px;
+  height: 70px;
+  background-color: #cde0f1;
+}
+
+.item__text {
+  width: 350px;
+}
+
+.item__date_loading {
+  width: 100px;
+  margin-bottom: 10px;
+  height: 21px;
+  background-color: #cde0f1;
+  position: relative;
+  animation: load 800ms infinite ease-in-out alternate;
+}
+
+.item__image_loading {
+  position: relative;
+  width: 70px;
+  height: 70px;
+  background-color: #cde0f1;
+  animation: load 800ms infinite ease-in-out alternate;
+}
+
+.item__line_loading {
+  width: 350px;
+  margin-bottom: 10px;
+  height: 21px;
+  background-color: #cde0f1;
+  position: relative;
+  animation: load 800ms infinite ease-in-out alternate;
+}
+
+@keyframes load {
+  from {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.error {
+  position: absolute;
+  left: 10%;
+  top: 50%;
+  border: 1px solid #3191f2;
+  border-radius: 10px;
+  box-sizing: border-box;
+  background-color: #ffffff;
+  padding: 10px;
+  margin: auto;
+}
