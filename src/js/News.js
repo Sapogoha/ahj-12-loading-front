@@ -12,7 +12,7 @@ export default class News {
     this.button.addEventListener('click', () => {
       this.reload();
     });
-    this.registerWorker();
+    // this.registerWorker();
   }
 
   async requestData() {
@@ -115,18 +115,18 @@ export default class News {
     this.requestData();
   }
 
-  registerWorker() {
-    if (navigator.serviceWorker) {
-      window.addEventListener('load', async () => {
-        try {
-          await navigator.serviceWorker.register('./service.worker.js', {
-            scope: './',
-          });
-          console.log('sw registered');
-        } catch (err) {
-          console.log(err);
-        }
-      });
-    }
-  }
+  // registerWorker() {
+  //   if (navigator.serviceWorker) {
+  //     window.addEventListener('load', async () => {
+  //       try {
+  //         await navigator.serviceWorker.register('./service.worker.js', {
+  //           scope: './',
+  //         });
+  //         console.log('sw registered');
+  //       } catch (err) {
+  //         console.log(err);
+  //       }
+  //     });
+  //   }
+  // }
 }
