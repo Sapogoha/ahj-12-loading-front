@@ -1,18 +1,10 @@
 import News from './News';
 
-(async () => {
-  try {
-    if (
-      'serviceWorker' in navigator
-      && process.env.NODE_ENV !== 'development'
-    ) {
-      await navigator.serviceWorker.register('./sw.js');
-      console.log('sw registered');
-    }
-  } catch (error) {
-    console.log('Service worker registration failed:', error);
-  }
-})();
+if ('serviceWorker' in navigator) {
+  window.addEventListener('load', () => {
+    navigator.serviceWorker.register('/service-worker.js');
+  });
+}
 
 const news = new News(document.querySelector('.news'));
 news.init();
